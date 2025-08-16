@@ -93,4 +93,32 @@ void div(int n){
  }   
 }Time complexity : O(n)
 
+void div(int n){
+set<int> v; //we could've used vector<int> v but we used set to avoid sorting it later on although they have same time complexity
+ for(int i=1;i<=sqrt(n);i++){
+     if(n%i==0) {
+        v.insert(i);
+        if(i!=(n/i)){
+            v.insert(n/i);
+        }
+     }
+ }
+ for(auto it:v){
+     cout<<it<<" ";
+ }
+} Time Complexity: O(sqrt(N)log(N))
+
+7. Prime
+bool prime(int n){
+    int cnt=0;
+ for(int i=2;i<=sqrt(n);i++){
+     if(n%i==0) {
+        cnt+=1;
+        }
+     }
+     if(cnt==0) return true;
+     else return false;
+ } Time Complexity: O(sqrt(N))
+
+
 
