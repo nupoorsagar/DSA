@@ -58,5 +58,19 @@ Fastest
    }
      return c==f;
     } Time Complexity: O(log10N + 1)
-4. 
+
+4. GCD
+int gcd(int n, int m) {
+    int ans;
+    if(m>n) {int temp=n; n=m; m=temp; }
+
+    for(int i=m;i>0;i--){
+        if(m%i==0){
+            if(n%i==0){
+                return i;
+            }
+        }
+    }
+}  Time complexity : O(min(n, m))
+
 
