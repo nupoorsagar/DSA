@@ -82,4 +82,27 @@ ms.erase(1); {}
 ms.erase(ms.find(1)); //only single one is erased {1,1}
 ms.erase(ms.find(1), ,ms.find(1) +2) ; 
 
+
 unodered_set<int> us;
+every operation ==> O(1)
+
+MAP stores unique keys in sorted order
+map<key,value> 
+
+map<int,int> m; every operation ==> O(logn)
+m[1]=2; m.emplace({2,4}); m.insert({3,1}); 
+[{1,2},{2,4},{3,1}]
+map<int,pair<int,int>> n; 
+n[2]= {5,6} 
+map<pair<int,int>,int> o; 
+o[{2,3}] =10;
+for(auto it: m){
+cout<<it.first<<" "<<it.second<<endl;
+} [{1,2},{2,4},{3,1}]
+cout<<m[1] //2
+cout<<m[10] //0 or null 
+auto it = m.find(3) //key 
+cout<<*(it) 
+
+multimap //duplicate keys allowed
+unordered map //unique every operation ==> O(1) , worst case O(n)
