@@ -73,4 +73,24 @@ int gcd(int n, int m) {
     }
 }  Time complexity : O(min(n, m))
 
+5. Armstrong Number 
+
+bool arm(int n) {
+   int cnt = (int)(log10(n)+1); int x=0; int f= n;
+   while(n>0){
+       int r=n%10; n=n/10;
+       x+= pow(r,cnt);
+   }
+   return f==x;
+} Time Complexity: O(log10N + 1) [cnt= to_string(n).length()-->takes same time]
+
+6. Print all Divisors
+
+void div(int n){
+ for(int i=1;i<=n;i++){
+     if(n%i==0) {
+        cout<<i<<" ";}
+ }   
+}Time complexity : O(n)
+
 
