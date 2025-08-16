@@ -104,5 +104,28 @@ cout<<m[10] //0 or null
 auto it = m.find(3) //key 
 cout<<*(it) 
 
+ALGORITHMS
+sort(a,a+n);
+sort(v.begin(),v.end())
+sort(a+2; a+4)
+sort(a, a+n,greater<int>) //descending order 
+
+acc to second but it second equal then acc to first in desc.
+pair<int,int> a[]={{1,2},{2,1},{4,1}}
+sort(a, a+n,comp); {{4,1},{2,1},{1,2}}
+
+int num=6
+int cnt= __builtin_popcount();
+long long num=143253647869;
+int cnt=__builtin_popcountll();
+
+string s="321";
+sort(s.begin(),s.end())
+do{
+cout<<s<<endl;}
+while(next_permutation(s.begin(),s.end()));
+
+int maxi= *max_element(a,a+n);
+
 multimap //duplicate keys allowed
 unordered map //unique every operation ==> O(1) , worst case O(n)
