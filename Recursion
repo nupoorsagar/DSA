@@ -12,3 +12,15 @@ int f(int n){
  if(n==0) return 0;
  return n + f(n-1);
 }
+2. Factorial 
+int print(int n){
+ if(n==1) return 1;
+ return n* print(n-1);
+} Time Complexity: O(N) 
+
+3. Reverse Array
+void rev(int l, int r, int arr[]){
+    if(l<r){
+    swap(arr[l], arr[r]);
+    rev(l+1, r-1,arr);} 
+} Time Complexity: O(n)
