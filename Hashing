@@ -1,0 +1,44 @@
+counting frequency 
+1. of integers
+int hash[max element]={0};
+for(int i=0;i<arr.size();i++){
+hash[arr[i]]+=1;
+}
+
+2. of char 
+string s;cin>>s;
+int hash[256]={0};
+for(int i=0;i<s.size();i++{
+hash[s[i]]++;
+}
+int q;cin>>q;
+while(q--){
+char c;
+cin>>c;
+cout<<hash[c];
+}
+
+ORDERED MAP can have any data structure as key
+storing and fetching --> O(log(n))
+1. integer
+map<int,int> m;
+for(int i=0;i<n;i++){
+m[arr[i]]++;
+}
+for(auto it: m){
+cout<<it.first<<"->"<<it.second<<endl;
+}
+2. map<char,int> m;
+for(int i=0;i<n;i++){
+m[s[i]]++;
+}
+
+UNORDERED MAP can not have pair<> DS as key
+storing and fetching --> O(1)[best and average case] [O(n)-->worst case]
+
+Hashing Methods
+1. division
+arr[i]%10    139%10=9
+there is collision and how we avoid it is by chaining it, while chaining, its stored in sorted manner and the no. we're looking for can be found by BS in minimal time. 
+2. folding
+3. mid square 
