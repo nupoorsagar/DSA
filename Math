@@ -1,3 +1,5 @@
+Sum of first n numbers = N * (N + 1) / 2;
+
 1. count no of digits
 void c(int n){
     if(n<0){
