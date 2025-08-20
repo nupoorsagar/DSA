@@ -84,3 +84,25 @@ void recursiveinsertion(vector<int> &arr,int n, int i){
      }  
     recursiveinsertion(arr,n,i+1);
 }  Time complexity: O(N) best case
+
+7.Quick Sort
+int f(vector<int> &arr,int low,int high){
+    int pivot=arr[low];
+    int i=low;int j=high;
+    while(i<j){
+        while(arr[i]<=pivot && i<=high-1) i++;
+        while(arr[j]>pivot && j>=low+1) j--;
+        if(i<j) swap(arr[i],arr[j]);
+    }
+    swap(arr[low], arr[j]);
+    return j;
+}
+void quick(vector<int> &arr,int low,int high){
+    if(low>high) return;
+    if(low<high){
+       int part=f(arr,low,high);
+       quick(arr,low,part-1); 
+       quick(arr,part+1,high);
+    }
+} Time Complexity for the best and average case: O(N*logN),Worst Case Time complexity: O(n2) 
+
