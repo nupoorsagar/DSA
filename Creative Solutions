@@ -1,4 +1,4 @@
-Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+1. Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
 Input: nums = [2,2,1] Output: 1
 Input: nums = [4,1,2,1,2] Output: 4
 we use bitwise XOR and run it through nums, duplicate elements will cancel each other out and single number XORed with 000 will give the number itself. 
@@ -10,3 +10,16 @@ we use bitwise XOR and run it through nums, duplicate elements will cancel each 
      return res;
     }
 
+2. Finding Union Of arrays Time Complexity: O(m+n)
+void uni(vector<int> arr1,vector<int> arr2){
+    set<int> m;
+    for(auto it: arr1){
+        m.insert(it);
+    }
+    for(auto it: arr2){
+        m.insert(it);
+    }
+    for(auto it: m){
+       cout<<it<<" ";
+    }   
+}
