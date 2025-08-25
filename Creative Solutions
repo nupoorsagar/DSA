@@ -1,0 +1,12 @@
+Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+Input: nums = [2,2,1] Output: 1
+Input: nums = [4,1,2,1,2] Output: 4
+we use bitwise XOR and run it through nums, duplicate elements will cancel each other out and single number XORed with 000 will give the number itself. 
+    int singleNumber(vector<int>& nums) {
+     int res=0;
+     for(auto it:nums){
+        res=res^it;
+     }
+     return res;
+    }
+
